@@ -349,11 +349,8 @@
     {
         $(btns[i]).click(function(){
             showAnswers();
-            console.log($(this).find('h4').text());
-            console.log(answers[currQuestion]);
             if($(this).find('h4').text() == answers[currQuestion])
             {
-                console.log('correct');
                 correctAnswers++;
             }
         });
@@ -361,10 +358,9 @@
         function nextQuestion(){
             currQuestion++;
             if(currQuestion >= 7) {showResultContainer(); quizStarted = false; return;}
-            var btns = $(".options h4");
-            $(".opt-1").text(opts1[currQuestion]);
-            $(".opt-2").text(opts2[currQuestion]);
-            $(".opt-3").text(opts3[currQuestion]);
+            $(".opt-1 h4").text(opts1[currQuestion]);
+            $(".opt-2 h4").text(opts2[currQuestion]);
+            $(".opt-3 h4").text(opts3[currQuestion]);
             
             changeImgs();
             changeCaps();
