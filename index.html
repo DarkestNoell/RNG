@@ -443,6 +443,10 @@
         promoShown = true;
         $(".results-container").hide();
         $(".result-share-container").show();
-        $(".promo-container").show();
+        if($(window).width() > 992){
+            $(".promo-container").show();
+        }else{
+            $(".promo-container-mobile").show();
+        }
     }
 </script>
