@@ -34,7 +34,8 @@
         <h2 class="q-p2">But who was the oldest known mythic robot, who protected ancient Crete?</h2>
         <div class="quiz options">
             <div class="row quiz-row">
-                <div class="col-4 img-1 text-center">
+                <div class="col-1"></div>
+                <div class="col-3 img-1 text-center">
                     <img src="GodsAndRobots_QuizAssets/Images/Alamy/TerminatorRobot.jpg">
                     <p class="capt-left">I'll be back. Again and again</p>
                 </div>
@@ -45,7 +46,7 @@
                       <button class="opt-3" onclick="showAnswers()"><h4 class="opt-3">Minos</h4></button>
                     </div>
                 </div>
-                <div class="col-4 img-2 text-center">
+                <div class="col-3 img-2 text-center">
                     <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg">
                     <p class="capt-right">Talos model from Jason & The Argonauts</p>
                 </div>
@@ -267,11 +268,20 @@
     margin-bottom: auto;
 }
     
-.opt-1,
-.opt-2,
-.opt-3{
-    width: 100% !important;
+.opt-1 h4,
+.opt-2 h4,
+.opt-3 h4{
+    width: 100%;
 }
+    
+.quiz-container-mobile img{
+    padding: 30px;
+}
+    
+.options button{
+    width: 50%;
+}
+    
 </style>
 <script>
     var quizStarted = false;
@@ -291,7 +301,7 @@
         "GodsAndRobots_QuizAssets/Images/Book/EtruscanBronzeMirror.jpg",
         "GodsAndRobots_QuizAssets/Images/Book/BronzeRam.jpg",
         "GodsAndRobots_QuizAssets/Images/Library of Congress/WallStreetBull.jpg",
-        "",
+        "GodsAndRobots_QuizAssets/Images/Book/TheaterofHeron/TheaterOfHeron_4.JPG",
         "GodsAndRobots_QuizAssets/Images/Book/Pandora.jpg"
     ];
     
