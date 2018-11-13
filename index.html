@@ -46,9 +46,9 @@
                 </div>
                 <div class="options col-4">
                     <div class="btn-group" style="display:block;">
-                      <button class="opt-1" onclick="showAnswers()"><h4 class="opt-1">Cronos</h4></button>
-                      <button class="opt-2" onclick="showAnswers()"><h4 class="opt-2">Talos</h4></button>
-                      <button class="opt-3" onclick="showAnswers()"><h4 class="opt-3">Minos</h4></button>
+                      <button class="opt-1" onclick="showAnswers()"><h4 class="opt-1">A. Cronos</h4></button>
+                      <button class="opt-2" onclick="showAnswers()"><h4 class="opt-2">B. Talos</h4></button>
+                      <button class="opt-3" onclick="showAnswers()"><h4 class="opt-3">C. Minos</h4></button>
                     </div>
                 </div>
                 <div class="col-3 img-2 text-center">
@@ -78,9 +78,9 @@
                 </div>
                 <div class="options col-12">
                     <div class="btn-group" style="display:block;">
-                      <a href="#answerAnchor"><button class="opt-1" onclick="showAnswers()" href="#answerAnchor"><h4>Cronos</h4></button></a>
-                      <a href="#answerAnchor"><button class="opt-2" onclick="showAnswers()"><h4>Talos</h4></button></a>
-                      <a href="#answerAnchor"><button class="opt-3" onclick="showAnswers()"><h4>Minos</h4></button></a>
+                      <a href="#answerAnchor"><button class="opt-1" onclick="showAnswers()" href="#answerAnchor"><h4>A. Cronos</h4></button></a>
+                      <a href="#answerAnchor"><button class="opt-2" onclick="showAnswers()"><h4>B. Talos</h4></button></a>
+                      <a href="#answerAnchor"><button class="opt-3" onclick="showAnswers()"><h4>C. Minos</h4></button></a>
                     </div>
                 </div>
                 <div class="col-12 img-2" id="answerAnchor">
@@ -115,7 +115,7 @@
         <div class="promo-container">
         <h1 class="text-center">Learn more about the ancient roots of modern robots!</h1>
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 promo-container-div">
             <h1 class="text-right">"Vivid and exhilirating"</h1>
             <h3 class="text-right"> George Zarkadakis, author of In Our Own </h3>
             <h6 class="text-right">Image: Savior or Destroyer? The History and Future of Artificial Intelligence</h3>
@@ -123,7 +123,7 @@
             <div class="col-4">
                 <img style="max-width:100%;" src="GodsAndRobots_QuizAssets/BookCover/Mayor_GodsAndRobots_Mockup.png"/>
             </div>
-            <div class="col-4 text-left">
+            <div class="col-4 text-left promo-container-div">
                 <h1>"Wonderful storytelling, thorough research, and impressive expertise"</h1>
                 <h6>Sarah Olson, Science</h6>
             </div>
@@ -289,6 +289,10 @@
     width: 50%;
 }
     
+.promo-container-div{
+    margin-top: 3%;
+}
+    
 </style>
 <script>
     var quizStarted = false;
@@ -406,9 +410,9 @@
             currQuestion++;
             
             if(currQuestion >= 7) {showResultContainer(); quizStarted = false; return;}
-            $(".opt-1 h4").text(opts1[currQuestion]);
-            $(".opt-2 h4").text(opts2[currQuestion]);
-            $(".opt-3 h4").text(opts3[currQuestion]);
+            $(".opt-1 h4").text("A. " + opts1[currQuestion]);
+            $(".opt-2 h4").text("B. " + opts2[currQuestion]);
+            $(".opt-3 h4").text("C. " + opts3[currQuestion]);
             
             changeImgs();
             changeCaps();
@@ -416,7 +420,7 @@
             changeAnswerText(); 
             hideAnswers();
             
-            if(currQuestion == 2)
+            if(currQuestion == 2 || currQuestion == 5)
             {
                 var test = $(".img-2").show();
                 test.show();
