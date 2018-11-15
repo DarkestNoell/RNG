@@ -30,22 +30,22 @@
         <h3 class="q-p2">But who was the oldest known mythic robot who protected ancient Crete?</h3>
         <div class="quiz options">
             <div class="row quiz-row">
-                <div class="col-4 img-1 text-center img-container">
+                <div class="col-6 img-1 text-center img-container">
                     <img src="GodsAndRobots_QuizAssets/Images/Alamy/TerminatorRobot.jpg">
                     <p class="capt-left">I'll be back. Again and again</p>
                 </div>
-                <div class="options col-4">
-                    <div class="btn-group" style="display:block;">
-                        <a href="#answerAnchor"><button class="opt-1" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-1">A. Cronos</h4></button></a>
-                        <a href="#answerAnchor"><button class="opt-2" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-2">B. Talos</h4></button></a>
-                        <a href="#answerAnchor"><button class="opt-3" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-3">C. Minos</h4></button></a>
-                    </div>
-                </div>
-                <div class="col-4 img-2 text-center img-container">
+                <div class="col-6 img-2 text-center img-container">
                     <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg">
                     <p class="capt-right">Talos model from Jason & The Argonauts</p>
                 </div>
             </div>
+                <div class="options">
+                    <div class="btn-group" style="display:flex;justify-content:center;">
+                        <a class="desktop-quiz-btn" href="#answerAnchor"><button class="opt-1" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-1">A. Cronos</h4></button></a>
+                        <a class="desktop-quiz-btn" href="#answerAnchor"><button class="opt-2" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-2">B. Talos</h4></button></a>
+                        <a class="desktop-quiz-btn" href="#answerAnchor"><button class="opt-3" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-3">C. Minos</h4></button></a>
+                    </div>
+                </div>
             <div class="next-question-btn text-center">
                       <button class="next-button" onclick="nextQuestion()"><h4>NEXT QUESTION</h4></button>
                 </div>
@@ -190,7 +190,8 @@
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     margin-top: 15px;
     width: 100%;
@@ -302,7 +303,7 @@
     }
 
     .options img{
-        height: 264px;
+        height: 420px;
     }
     
     .result-share-container,
@@ -313,8 +314,22 @@
     
     .see-score-button,
     .next-button{
+        min-width: 200px;
         width: 15% !important;
         height: 75px;
+    }
+    
+    .options btn-group{
+        justify-content: center;
+    }
+    
+    .desktop-quiz-btn{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .see-score-button{
+       margin-top: 30px;
     }
 }
     
@@ -356,7 +371,7 @@
 .opt-1,
 .opt-2,
 .opt-3{
-        width: 100% !important;
+        width: 90% !important;
 }
     
 .see-score-button{
