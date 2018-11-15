@@ -14,7 +14,7 @@
     <body>
         <div class="all-quiz">
             <img src="Border.svg"/>
-        <div class="instruction-container container-fluid">
+<div class="instruction-container container-fluid">
             <div class="instruction-title text-center"><img src="quiztitle.PNG"/></div>
             <h4>Everyone has a favorite robot or mechanical marvel. </h4>
             <h4>Yours might be the unstoppable Terminator or the droll droid C-3PO.  Or maybe you prefer the lifelike hosts of Westworld, or the transmogrifying car-truck-plane Transformers. </h4>
@@ -25,41 +25,6 @@
             <div style="text-align:center;" class="press-to-start" onclick="startQuiz()">
                 <button class="start-button" onclick="startQuiz()"><h4>Press to start</h4></button>
             </div>
-        </div>
-        <div class="quiz-container">
-        <h3 class="q-p1">Q1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h3>
-        <h3 class="q-p2">But who was the oldest known mythic robot who protected ancient Crete?</h3>
-        <div class="quiz options">
-            <div class="row quiz-row">
-                <div class="col-6 img-1 text-center img-container">
-                    <img src="GodsAndRobots_QuizAssets/Images/Alamy/TerminatorRobot.jpg">
-                    <p class="capt-left">I'll be back. Again and again</p>
-                </div>
-                <div class="col-6 img-2 text-center img-container">
-                    <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg">
-                    <p class="capt-right">Talos model from Jason & The Argonauts</p>
-                </div>
-            </div>
-                <div class="options">
-                    <div class="btn-group" style="display:flex;justify-content:center;">
-                        <a class="desktop-quiz-btn" href="#answerAnchor"><button class="opt-1" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-1">A. Cronos</h4></button></a>
-                        <a class="desktop-quiz-btn" href="#answerAnchor"><button class="opt-2" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-2">B. Talos</h4></button></a>
-                        <a class="desktop-quiz-btn" href="#answerAnchor"><button class="opt-3" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-3">C. Minos</h4></button></a>
-                    </div>
-                </div>
-            <div class="next-question-btn text-center">
-                      <button class="next-button" onclick="nextQuestion()"><h4>NEXT QUESTION</h4></button>
-                </div>
-            <div class="text-center">
-                 <button onclick="showLastContainers()" class="see-score-button"  onclick="showLastContainers()"><h4>PRESS FOR YOUR SCORE</h4></button>
-            </div>
-            <div class="answer-container" id="answerAnchor">
-                <h4 class="answer-p1">The answer is B!</h4>
-                <h4 class="answer-p2">The metallic behemoth Talos was created by Haephaestus to protect Crete, by circling it three times a day, hurling rocks at any enemy ships. </h4>
-                 <h4 class="star-wars-p2">The 44 stone giants of Mont’e Prama, Sardinia stood 6 ½ feet tall, and were discovered in 1974. The original <i>Star Wars</i> debuted 3 years later. Coincidence?</h4>
-                <h4 class="dolly-p2">The ancient Greeks believed that <i>techne</i><em>-</em>or craft - could create life that was “made, not born.”  Dolly was actually made (by cloning cells) and implanted in a surrogate sheep mother, and then born.</h4>
-            </div>
-        </div>
         </div>
         <div class="quiz-container-mobile" style="padding: 0;" id="questionAnchor">
         <h3 class="q-p1 text-center">Q1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h2>
@@ -145,9 +110,8 @@
             </div>
         </div>
         </div>
-        </div>
                     <img src="Border.svg"/>
-
+        </div>
     </body>
 </html>
 
@@ -256,7 +220,7 @@
     max-width: 100%;
 }
     
-@media(max-width: 650px)
+@media(max-width: 3000px)
 {
     .options{
         padding: 30px !important;
@@ -272,12 +236,7 @@
     
     .img-1 img,
     .img-2 img{
-        padding-bottom:0px;
-        width: 60vw;
-        height: 50vh;
-        min-height: 300px;
-        min-width: 400px;
-        max-height: 176px;
+       max-height: 80vh;
     }
     
     .img-1,
@@ -298,43 +257,6 @@
     }
 }
 
-@media(min-width: 651px)
-{
-    .next-question-btn{
-        display: none; 
-        padding: 30px;
-    }
-
-    .options img{
-        height: 420px;
-    }
-    
-    .result-share-container,
-    .results-container,
-    .result-share-container img{
-        padding:0px;
-    }
-    
-    .see-score-button,
-    .next-button{
-        min-width: 200px;
-        width: 15% !important;
-        height: 75px;
-    }
-    
-    .options btn-group{
-        justify-content: center;
-    }
-    
-    .desktop-quiz-btn{
-        margin-right: auto;
-        margin-left: auto;
-    }
-    
-    .see-score-button{
-       margin-top: 30px;
-    }
-}
     
 .quiz-row{
     margin-top: 30px;
@@ -380,6 +302,11 @@
 .see-score-button{
     width: 170px !important;
 }
+    
+    .all-quiz{
+        max-width: 650px;
+        margin: 0 auto;
+    }
 </style>
 <script>
     var quizStarted = false;
@@ -464,25 +391,6 @@
         "1 out of 7   Brave try, human!",
         "0 out of 7   Don’t feel bad. All robots worship the number zero."
     ];
-    
-    $(window).resize(function(){
-        console.log($(window).width());
-        if(quizStarted && $(window).width() <= 633)
-            {
-                $(".quiz-container-mobile").show();
-                $(".quiz-container").hide();
-            }else if(quizStarted){
-                $(".quiz-container").show();
-                $(".quiz-container-mobile").hide();
-            }else if(promoShown && $(window).width() <= 633)
-            {
-                $(".promo-container-mobile").show();
-                $(".promo-container").hide();
-            }else if(promoShown){
-                $(".promo-container").show();
-                $(".promo-container-mobile").hide();
-            }
-    }); 
     
     var btns = $('.options button');
     for(var i = 0; i < btns.length; i++)
@@ -600,8 +508,7 @@
     {
         quizStarted = true;
         $(".instruction-container").hide();
-        if($(window).width() <= 992) {$(".quiz-container-mobile").show();}
-        else{$(".quiz-container").show();}
+        $(".quiz-container-mobile").show();
         hideAnswers();
     }
     
