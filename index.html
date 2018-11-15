@@ -12,6 +12,7 @@
          <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
     </head>
     <body>
+        <div class="all-quiz">
         <div class="instruction-container container-fluid">
             <div class="instruction-title text-center"><img src="quiztitle.PNG"/></div>
             <h4>Everyone has a favorite robot or mechanical marvel. </h4>
@@ -20,19 +21,16 @@
             <h4>Long before the robots of today, and well before modern sci-fi, an amazing variety of mechanical creations, lifelike automata, and other man-created technologies were thought up by the ancients.  </h4>
             <h4>We know this because they wove them into stories and painted, carved, and cast them into artworks, and those things last.</h4>
             <h4>Ready to test your robot circuits?</h4>
-            <div style="text-align:right;" class="press-to-start" onclick="startQuiz()">
+            <div style="text-align:center;" class="press-to-start" onclick="startQuiz()">
                 <button class="start-button" onclick="startQuiz()"><h4>Press to start</h4></button>
             </div>
         </div>
         <div class="quiz-container">
-            <div style="height:130px">
         <h3 class="q-p1">Q1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h3>
         <h3 class="q-p2">But who was the oldest known mythic robot who protected ancient Crete?</h3>
-            </div>
         <div class="quiz options">
             <div class="row quiz-row">
-                <div class="col-1"></div>
-                <div class="col-3 img-1 text-center">
+                <div class="col-4 img-1 text-center img-container">
                     <img src="GodsAndRobots_QuizAssets/Images/Alamy/TerminatorRobot.jpg">
                     <p class="capt-left">I'll be back. Again and again</p>
                 </div>
@@ -43,12 +41,12 @@
                         <a href="#answerAnchor"><button class="opt-3" onclick="showAnswers()" href="#answerAnchor"><h4 class="opt-3">C. Minos</h4></button></a>
                     </div>
                 </div>
-                <div class="col-3 img-2 text-center">
+                <div class="col-4 img-2 text-center img-container">
                     <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg">
                     <p class="capt-right">Talos model from Jason & The Argonauts</p>
                 </div>
             </div>
-            <div class="next-question-btn text-center" style="padding: 0;">
+            <div class="next-question-btn text-center">
                       <button class="next-button" onclick="nextQuestion()"><h4>NEXT QUESTION</h4></button>
                 </div>
             <div class="text-center">
@@ -106,7 +104,7 @@
         <div class="result-share-container text-center">
             <h3 class="score">10/10</h3>
             <div class="row share-buttons">
-                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fblog.press.princeton.edu%2F2018%2F11%2F13%2Fadrienne-mayor-on-gods-and-robots%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="84" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" style="margin-right: 10px;"></iframe>
+                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fblog.press.princeton.edu%2F2018%2F11%2F13%2Fadrienne-mayor-on-gods-and-robots%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="100" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" style="margin-right: 10px;"></iframe>
                         <div style="display: inline">
                         <a href="https://twitter.com/intent/tweet?screen_name=princetonupress&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="I took the Robots and Gods Quiz!" data-show-count="false" style="margin-left:10px;">Tweet to @princetonupress</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>   
                 </div>
@@ -129,7 +127,7 @@
             </div>
         </div>
         </div>
-        <div class="promo-container-mobile">
+        <div class="promo-container-mobile text-center">
         <h1 class="text-center">Learn more about the ancient roots of modern robots</h1>
         <div class="row">
             <div class="col-12">
@@ -146,10 +144,22 @@
             </div>
         </div>
         </div>
+        </div>
     </body>
 </html>
 
 <style>
+    .promo-container,
+    .result-share-container,
+    .instruction-container{
+        max-width: 650px;
+        margin:0 auto;
+    }
+    
+    .quiz-container{
+        max-width: 650px;
+    }
+    
     .next-button{
         min-width: 160px;
     }
@@ -175,24 +185,16 @@
         padding: 5px;
     }
     
-    .img-1 img,
-    .img-2 img{
-        padding-bottom:0px;
-        max-width: 350px;
-        width: 100%;
-        height: 50vh;
-    }
-    
     .btn-group button {
     border: 1px solid orange; /* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    width: 60%; /* Set a width if needed */
     display: block;
     margin: 0 auto;
     margin-top: 15px;
-    height: 80px;
+    width: 100%;
+    height: 110px;
 }
 
 .btn-group button:not(:last-child) {
@@ -206,6 +208,8 @@
     
 .quiz-container{
     padding: 30px;
+    max-width: 650px;
+    margin:0 auto;
 }
     
 .quiz-container,
@@ -218,6 +222,7 @@
 .promo-container-mobile{
     display: none;
     animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding:30px;
 }
 
 .see-score-button,
@@ -242,9 +247,17 @@
 .welcome-container {  
   padding: 30px;
 }
+
+.options img{
+    max-width: 100%;
+}
     
-@media(max-width: 992px)
+@media(max-width: 650px)
 {
+    .options{
+        padding: 30px !important;
+    }
+    
     .press-to-start,
     .press-to-start-txt,
     .instruction-container,
@@ -260,6 +273,7 @@
         height: 50vh;
         min-height: 300px;
         min-width: 400px;
+        max-height: 176px;
     }
     
     .img-1,
@@ -272,16 +286,25 @@
     }
     
     .next-question-btn{
-        padding: 0;
+        padding: 15px;
     }
     
     .answer-container{
-        padding: 5px;
+        padding: 15px !important;
     }
 }
-    
-@media(min-width: 992px)
+
+@media(min-width: 651px)
 {
+    .next-question-btn{
+        display: none; 
+        padding: 30px;
+    }
+
+    .options img{
+        height: 264px;
+    }
+    
     .result-share-container,
     .results-container,
     .result-share-container img{
@@ -298,14 +321,7 @@
 .quiz-row{
     margin-top: 30px;
 }
-.options,
-.next-question-btn{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-    
-    .next-question-btn{display: none;}
-    
+        
 .opt-1 h4,
 .opt-2 h4,
 .opt-3 h4{
@@ -334,6 +350,17 @@
 .start-button{
     background-color: #C96728;
     color: white;
+    text-align: center;
+}
+    
+.opt-1,
+.opt-2,
+.opt-3{
+        width: 100% !important;
+}
+    
+.see-score-button{
+    width: 170px !important;
 }
 </style>
 <script>
@@ -360,7 +387,7 @@
     
     var img2Paths = [
         "",
-        "GodsAndRobots_QuizAssets/Images/Flickr/C-3PO.jpg",
+        "GodsAndRobots_QuizAssets/Images/Flickr/C-3PO.png",
         "GodsAndRobots_QuizAssets/Images/Alamy/BostonDynamics-SpotMini.jpg",
         "GodsAndRobots_QuizAssets/Images/Flickr/Dolly.jpg",
         "GodsAndRobots_QuizAssets/Images/Book/Daedalus-Cow.jpg",
@@ -421,14 +448,15 @@
     ];
     
     $(window).resize(function(){
-        if(quizStarted && $(window).width() <= 992)
+        console.log($(window).width());
+        if(quizStarted && $(window).width() <= 633)
             {
                 $(".quiz-container-mobile").show();
                 $(".quiz-container").hide();
             }else if(quizStarted){
                 $(".quiz-container").show();
                 $(".quiz-container-mobile").hide();
-            }else if(promoShown && $(window).width() <= 992)
+            }else if(promoShown && $(window).width() <= 633)
             {
                 $(".promo-container-mobile").show();
                 $(".promo-container").hide();
