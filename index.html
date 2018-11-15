@@ -13,7 +13,10 @@
     </head>
     <body>
         <div class="all-quiz">
-            <img src="Border.svg"/>
+             <div class="border-container">
+                    <img src="Border.svg" class="quiz-border" id="questionAnchor"/>
+                    <img class="mrq" src="MRQ.png" />
+            </div>
 <div class="instruction-container container-fluid">
             <div class="instruction-title text-center"><img src="quiztitle.PNG"/></div>
             <h4>Everyone has a favorite robot or mechanical marvel. </h4>
@@ -23,12 +26,12 @@
             <h4>We know this because they wove them into stories and painted, carved, and cast them into artworks, and those things last.</h4>
             <h4>Ready to test your robot circuits?</h4>
             <div style="text-align:center;" class="press-to-start" onclick="startQuiz()">
-                <button class="start-button" onclick="startQuiz()"><h4>Press to start</h4></button>
+                <button class="start-button" onclick="startQuiz()" href="#questionAnchor"><h4>Press to start</h4></button>
             </div>
         </div>
-        <div class="quiz-container-mobile" style="padding: 0;" id="questionAnchor">
-        <h3 class="q-p1 text-center">Q1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h2>
-        <h3 class="q-p2 text-center">But who was the oldest known mythic robot, who protected ancient Crete?</h2>
+        <div class="quiz-container-mobile" style="padding: 0;">
+        <h3 class="q-p1 text-center">Q1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h3>
+        <h3 class="q-p2 text-center">But who was the oldest known mythic robot, who protected ancient Crete?</h3>
         <div class="quiz options">
             <div class="row">
                 <div class="col-2"></div>
@@ -80,15 +83,15 @@
         <h1 class="text-center">Learn more about the ancient roots of modern robots</h1>
         <div class="row">
             <div class="col-4 promo-container-div">
-            <h1 class="text-right">"Vivid and exhilirating."</h1>
-                <h1 class="text-right"> George Zarkadakis, author of <i>In Our Own</i></h1>
-                <h6 class="text-right"><i>Image: Savior or Destroyer? The History and Future of Artificial Intelligence</i></h6>
+            <h3 class="text-center">"Vivid and exhilirating."</h3>
+                <h3 class="text-center"> George Zarkadakis, author of <i>In Our Own</i></h3>
+                <h6 class="text-center"><i>Image: Savior or Destroyer? The History and Future of Artificial Intelligence</i></h6>
             </div> 
             <div class="col-4">
                 <img style="max-width:100%;" src="GodsAndRobots_QuizAssets/BookCover/Mayor_GodsAndRobots_Mockup.png"/>
             </div>
             <div class="col-4 text-left promo-container-div">
-                <h1>"Wonderful storytelling, thorough research, and impressive expertise."</h1>
+                <h3>"Wonderful storytelling, thorough research, and impressive expertise."</h1>
                 <h6>Sarah Olson, <i>Science</i></h6>
             </div>
         </div>
@@ -110,12 +113,32 @@
             </div>
         </div>
         </div>
-                    <img src="Border.svg"/>
+            <div class="border-container">
+                    <img src="Border.svg" class="quiz-border"/>
+                    <img class="mrq" src="MRQ.png"/>
+            </div>
         </div>
     </body>
 </html>
 
 <style>
+    .border-container{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .border-container .mrq{
+        height: 300px;
+    }
+    
+    .mrq{
+        max-width: 580px;
+    }
+    
+    .quiz-border{
+        display: none;
+    }
+    
     .promo-container,
     .result-share-container,
     .instruction-container{
@@ -352,7 +375,7 @@
     
     var questionsP2 = [
         "But who was the oldest known mythic robot, who protected ancient Crete?",
-        "And yet, it bears an uncanny resemblance to what robot, played by Anthony Daniels in a long series of sci-fi movies?",
+        "And yet, it bears an uncanny resemblance to what robot, played by Anthony Daniels in a long series of sci-fi movies?",
         "What modern company created this robot dog, which can fetch small objects?",
         "What was the name of the first living cloned sheep, created by scientists in Edinburgh in 1996?",
         "In antiquity, how was the remarkably lifelike sculpture of a bull created by genius inventor Daedalus used?",
@@ -507,8 +530,11 @@
     function startQuiz()
     {
         quizStarted = true;
+        $(".border-container .mrq").hide();
+        $(".quiz-border").show();
         $(".instruction-container").hide();
         $(".quiz-container-mobile").show();
+        window.scrollTo(0, 0);
         hideAnswers();
     }
     
