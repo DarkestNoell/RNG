@@ -72,13 +72,13 @@
                 </div>
                 <div class="options col-12">
                     <div class="btn-group" style="display:block;">
-                      <a href="#answerAnchor"><button class="opt-1" onclick="showAnswers()" href="#answerAnchor"><h4>A. Cronos</h4></button></a>
-                      <a href="#answerAnchor"><button class="opt-2" onclick="showAnswers()" href="#answerAnchor"><h4>B. Talos</h4></button></a>
-                      <a href="#answerAnchor"><button class="opt-3" onclick="showAnswers()" href="#answerAnchor"><h4>C. Minos</h4></button></a>
+                        <a href="#answerAnchorMobile"><button class="opt-1" onclick="showAnswers()" href="#answerAnchorMobile"><h4 class="opt-1">A. Cronos</h4></button></a>
+                        <a href="#answerAnchorMobile"><button class="opt-2" onclick="showAnswers()" href="#answerAnchorMobile"><h4 class="opt-2">B. Talos</h4></button></a>
+                        <a href="#answerAnchorMobile"><button class="opt-3" onclick="showAnswers()" href="#answerAnchorMobile"><h4 class="opt-3">C. Minos</h4></button></a>
                     </div>
                 </div>
-                <div class="col-12 img-2" id="answerAnchor">
-                    <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg">
+                <div class="col-12 img-2">
+                    <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg" id="answerAnchorMobile">
                     <p class="capt-right">Talos model from Jason & The Argonauts</p>
                 </div>
             </div>
@@ -148,6 +148,10 @@
 </html>
 
 <style>
+    .next-button{
+        min-width: 160px;
+    }
+    
     .options a:hover{
         text-decoration: none;
     }
@@ -244,13 +248,30 @@
         text-align: center !important;
     }
     
+    .img-1 img,
+    .img-2 img{
+        padding-bottom:0px;
+        width: 60vw;
+        height: 50vh;
+        min-height: 300px;
+        min-width: 400px;
+    }
+    
     .img-1,
     .img-2{
-        padding: 10px;
+        padding: 5px;
     }
     
     .next-button{
-        width: 50% !important;
+        width: 150px !important;
+    }
+    
+    .next-question-btn{
+        padding: 0;
+    }
+    
+    .answer-container{
+        padding: 5px;
     }
 }
     
@@ -287,7 +308,7 @@
 }
     
 .quiz-container-mobile img{
-    padding: 30px;
+    padding: 5px;
 }
     
 .options button{
