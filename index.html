@@ -18,19 +18,19 @@
             </div>
 <div class="instruction-container container-fluid">
             <div class="instruction-title text-center"><img src="quiztitle.PNG"/></div>
-            <h4>Everyone has a favorite robot or mechanical marvel. </h4>
-            <h4>Yours might be the unstoppable Terminator or the droll droid C-3PO.  Or maybe you prefer the lifelike hosts of Westworld, or the transmogrifying car-truck-plane Transformers. </h4>
-            <h4>But did you know, deep inside your favorite robot is some DNA from the ancient world? </h4>
-            <h4>Long before the robots of today, and well before modern sci-fi, an amazing variety of mechanical creations, lifelike automata, and other man-created technologies were thought up by the ancients.  </h4>
-            <h4>We know this because they wove them into stories and painted, carved, and cast them into artworks, and those things last.</h4>
+            <h5>Everyone has a favorite robot or mechanical marvel. </h4>
+            <h5>Yours might be the unstoppable Terminator or the droll droid C-3PO.  Or maybe you prefer the lifelike hosts of Westworld, or the transmogrifying car-truck-plane Transformers. </h5>
+            <h5>But did you know, deep inside your favorite robot is some DNA from the ancient world? </h5>
+            <h5>Long before the robots of today, and well before modern sci-fi, an amazing variety of mechanical creations, lifelike automata, and other man-created technologies were thought up by the ancients.  </h5>
+            <h5>We know this because they wove them into stories and painted, carved, and cast them into artworks, and those things last.</h5>
             <h4>Ready to test your robot circuits?</h4>
             <div style="text-align:center;" class="press-to-start" onclick="startQuiz()">
                 <button class="start-button" onclick="startQuiz()" href="#questionAnchor"><h4>Press to start</h4></button>
             </div>
         </div>
         <div class="quiz-container-mobile" style="padding: 0;">
-        <h3 class="q-p1 text-center">Q1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h3>
-        <h3 class="q-p2 text-center">But who was the oldest known mythic robot, who protected ancient Crete?</h3>
+        <h4 class="q-p1 text-center">Q1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h4>
+        <h4 class="q-p2 text-center">But who was the oldest known mythic robot, who protected ancient Crete?</h4>
         <div class="quiz options">
             <div class="row">
                 <div class="col-2"></div>
@@ -81,11 +81,6 @@
         <div class="promo-container-mobile text-center">
         <h1 class="text-center">Learn more about the ancient roots of modern robots</h1>
         <div class="row">
-            <div class="col-12">
-            <h1 class="text-center">"Vivid and exhilirating."</h1>
-            <h1 class="text-center"> George Zarkadakis, author of <i>In Our Own</i></h1>
-                <h6 class="text-center"><i>Image: Savior or Destroyer? The History and Future of Artificial Intelligence</i></h6>
-            </div> 
             <div class="col-12">
                 <img style="max-width:100%;" src="GodsAndRobots_QuizAssets/BookCover/Mayor_GodsAndRobots_Mockup.png"/>
             </div>
@@ -189,13 +184,19 @@
 .promo-container,
 .results-container,
 .result-share-container,
-.answer-container,
 .next-question-btn,
-.quiz-container-mobile,
-.promo-container-mobile{
+.quiz-container-mobile{
     display: none;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     padding:30px;
+}
+ 
+.promo-container-mobile,
+.answer-container
+{
+    display: none;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding:0px 15px 0px 15px;
 }
 
 .see-score-button,
@@ -309,7 +310,9 @@
     }
     
     .anaswer-container{
-        padding: 0;
+        padding: 0px !important;
+        padding-right: 15px;
+        padding-left:15px;
     }
 </style>
 <script>
@@ -532,5 +535,6 @@
         $(".results-container").hide();
         $(".result-share-container").show();
         $(".promo-container-mobile").show();
+        window.scrollTo(0, 0);
     }
 </script>
