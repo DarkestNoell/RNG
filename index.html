@@ -14,7 +14,6 @@
     <body>
         <div class="all-quiz">
              <div class="border-container">
-                    <img src="Border.svg" class="quiz-border" id="questionAnchor"/>
                     <img class="mrq" src="mrq.jpg" />
             </div>
 <div class="instruction-container container-fluid">
@@ -40,7 +39,7 @@
                     <p class="capt-left">I'll be back. Again and again</p>
                 </div>
                 <div class="options col-12">
-                    <div class="btn-group" style="display:block;">
+                    <div class="btn-group" style="display:flex; justify-content: center;">
                         <a href="#answerAnchorMobile"><button class="opt-1" onclick="showAnswers()" href="#answerAnchorMobile"><h4 class="opt-1">A. Cronos</h4></button></a>
                         <a href="#answerAnchorMobile"><button class="opt-2" onclick="showAnswers()" href="#answerAnchorMobile"><h4 class="opt-2">B. Talos</h4></button></a>
                         <a href="#answerAnchorMobile"><button class="opt-3" onclick="showAnswers()" href="#answerAnchorMobile"><h4 class="opt-3">C. Minos</h4></button></a>
@@ -79,23 +78,6 @@
                 </div>
             </div>    
         </div>
-    <div class="promo-container">
-        <h1 class="text-center">Learn more about the ancient roots of modern robots</h1>
-        <div class="row">
-            <div class="col-4 promo-container-div">
-            <h3 class="text-center">"Vivid and exhilirating."</h3>
-                <h3 class="text-center"> George Zarkadakis, author of <i>In Our Own</i></h3>
-                <h6 class="text-center"><i>Image: Savior or Destroyer? The History and Future of Artificial Intelligence</i></h6>
-            </div> 
-            <div class="col-4">
-                <img style="max-width:100%;" src="GodsAndRobots_QuizAssets/BookCover/Mayor_GodsAndRobots_Mockup.png"/>
-            </div>
-            <div class="col-4 text-left promo-container-div">
-                <h3>"Wonderful storytelling, thorough research, and impressive expertise."</h1>
-                <h6>Sarah Olson, <i>Science</i></h6>
-            </div>
-        </div>
-        </div>
         <div class="promo-container-mobile text-center">
         <h1 class="text-center">Learn more about the ancient roots of modern robots</h1>
         <div class="row">
@@ -114,7 +96,6 @@
         </div>
         </div>
             <div class="border-container">
-                    <img src="Border.svg" class="quiz-border"/>
                     <img class="mrq" src="mrq.jpg"/>
             </div>
         </div>
@@ -125,6 +106,7 @@
     .border-container{
         display: flex;
         justify-content: center;
+        background-repeat: no-repeat;
     }
     
     .border-container .mrq{
@@ -246,9 +228,8 @@
 @media(max-width: 3000px)
 {
     .options{
-        padding: 30px !important;
+        padding: 15px 0 15px 0;
     }
-    
     .press-to-start,
     .press-to-start-txt,
     .instruction-container,
@@ -259,7 +240,7 @@
     
     .img-1 img,
     .img-2 img{
-       max-height: 80vh;
+       max-height: 60vh;
     }
     
     .img-1,
@@ -273,10 +254,6 @@
     
     .next-question-btn{
         padding: 15px;
-    }
-    
-    .answer-container{
-        padding: 15px !important;
     }
 }
 
@@ -329,6 +306,10 @@
     .all-quiz{
         max-width: 650px;
         margin: 0 auto;
+    }
+    
+    .anaswer-container{
+        padding: 0;
     }
 </style>
 <script>
@@ -427,6 +408,7 @@
     }
         
         function nextQuestion(){
+            window.scrollTo(0, 0);
             currQuestion++;
             changeImgs();
             changeCaps();
@@ -534,6 +516,8 @@
         $(".quiz-border").show();
         $(".instruction-container").hide();
         $(".quiz-container-mobile").show();
+        $(".border-container").css("height","50px");
+        $('.border-container').css('background-image', 'url(' + 'Border.svg' + ')');
         window.scrollTo(0, 0);
         hideAnswers();
     }
@@ -547,10 +531,6 @@
         quizStarted = false;
         $(".results-container").hide();
         $(".result-share-container").show();
-        if($(window).width() > 992){
-            $(".promo-container").show();
-        }else{
-            $(".promo-container-mobile").show();
-        }
+        $(".promo-container-mobile").show();
     }
 </script>
