@@ -13,17 +13,14 @@
     </head>
     <body>
         <div class="all-quiz">
-             <div class="border-container">
-                    <img class="mrq" src="mrq.jpg" />
+             <div class="border-container-1">
             </div>
 <div class="instruction-container container-fluid">
-            <div class="instruction-title text-center"><img src="quiztitle.PNG"/></div>
-            <h5>Everyone has a favorite robot or mechanical marvel. </h4>
-            <h5>Yours might be the unstoppable Terminator or the droll droid C-3PO.  Or maybe you prefer the lifelike hosts of Westworld, or the transmogrifying car-truck-plane Transformers. </h5>
+            <h3>Everyone has a favorite robot or mechanical marvel. </h3>
             <h5>But did you know, deep inside your favorite robot is some DNA from the ancient world? </h5>
-            <h5>Long before the robots of today, and well before modern sci-fi, an amazing variety of mechanical creations, lifelike automata, and other man-created technologies were thought up by the ancients.  </h5>
+            <h5>Long before today's robots, and well before modern sci-fi, an amazing variety of mechanical creations, lifelike automata, and man-created technologies were thought up by the ancients.  </h5>
             <h5>We know this because they wove them into stories and painted, carved, and cast them into artworks, and those things last.</h5>
-            <h4>Ready to test your robot circuits?</h4>
+            <h3>Ready to test your robot circuits?</h3>
             <div style="text-align:center;" class="press-to-start" onclick="startQuiz()">
                 <button class="start-button" onclick="startQuiz()" href="#questionAnchor"><h4>Press to start</h4></button>
             </div>
@@ -37,6 +34,9 @@
                 <div class="col-12 img-1 text-center">
                     <img src="GodsAndRobots_QuizAssets/Images/Alamy/TerminatorRobot.jpg">
                     <p class="capt-left">I'll be back. Again and again</p>
+                    <p class="photo-credit-left">
+                        Photo courtesy of Atman Victor / Alamy Stock Photo
+                    </p>
                 </div>
                 <div class="options col-12">
                     <div class="btn-group" style="display:flex; justify-content: center;">
@@ -48,6 +48,7 @@
                 <div class="col-12 img-2">
                     <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg" id="answerAnchorMobile">
                     <p class="capt-right">Talos model from Jason & The Argonauts</p>
+                    <p class="photo-credit-right">Photo courtesy of Ray Harryhausen/Jason and the Argonauts (1963)</p>
                 </div>
             </div>
             <div class="answer-container">
@@ -71,9 +72,13 @@
         </div>
         <div class="result-share-container text-center">
             <h3 class="score">10/10</h3>
+            <h3 class="score-p2"></h3>
             <div class="row share-buttons">
-                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fblog.press.princeton.edu%2F2018%2F11%2F13%2Fadrienne-mayor-on-gods-and-robots%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="100" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" style="margin-right: 10px;"></iframe>
-                        <div style="display: inline">
+                <div id="fb-button">
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fblog.press.princeton.edu%2F2018%2F11%2F13%2Fadrienne-mayor-on-gods-and-robots%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="100" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" style="margin-right: 10px;"></iframe>
+                </div>
+                        
+                <div class="twitter-btn" style="display: inline">
                         <a href="https://twitter.com/intent/tweet?screen_name=princetonupress&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="I took the Robots and Gods Quiz!" data-show-count="false" style="margin-left:10px;">Tweet to @princetonupress</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>   
                 </div>
             </div>    
@@ -91,72 +96,69 @@
         </div>
         </div>
             <div class="border-container">
-                    <img class="mrq" src="mrq.jpg"/>
             </div>
         </div>
     </body>
 </html>
 
 <style>
-    .border-container{
-        display: flex;
-        justify-content: center;
-        background-repeat: no-repeat;
-    }
-    
-    .border-container .mrq{
-        height: 300px;
-    }
-    
-    .mrq{
-        max-width: 580px;
-    }
-    
-    .quiz-border{
-        display: none;
-    }
-    
-    .promo-container,
-    .result-share-container,
-    .instruction-container{
-        max-width: 650px;
-        margin:0 auto;
-    }
-    
-    .quiz-container{
-        max-width: 650px;
-    }
-    
-    .next-button{
-        min-width: 160px;
-    }
-    
-    .options a:hover{
-        text-decoration: none;
-    }
-    
-    .welcome-container,
-    instruction-container
-    {
-        font-family: abolition, sans-serif;
-        width: 580px;
-        margin: 0 auto;
-    }
-    
-    .welcome-img{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .instruction-container h4{
-        padding: 5px;
-    }
-    
-    .btn-group button {
-    border: 1px solid orange; /* Green border */
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
+.photo-credit-left,
+.photo-credit-right{
+    font-style: italic;
+}
+
+#fb-button{
+    height:50px;
+    width:95px;
+}
+
+.border-container{
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat !important;
+}
+
+.mrq{
+    height: 300px;
+    max-width: 580px;
+}
+
+.promo-container,
+.result-share-container,
+.instruction-container{
+    max-width: 650px;
+    margin:0 auto;
+}
+
+.next-button{
+    min-width: 160px;
+}
+
+.options a:hover{
+    text-decoration: none;
+}
+
+.welcome-container,
+.instruction-container
+{
+    font-family: abolition, sans-serif;
+    width: 580px;
+    margin: 0 auto;
+}
+
+.welcome-img{
+    display: flex;
+    justify-content: center;
+}
+
+.instruction-container h4{
+    padding: 5px;
+}
+
+.btn-group button {
+    color: white; 
+    padding: 10px 24px;
+    cursor: pointer; 
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -166,29 +168,25 @@
 }
 
 .btn-group button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
+    border-bottom: none;
 }
 
-/* Add a background color on hover */
 .btn-group button:hover {
     background-color: #3e8e41;
 }
     
-.quiz-container{
-    padding: 30px;
-    max-width: 650px;
-    margin:0 auto;
-}
-    
-.quiz-container,
 .promo-container,
 .results-container,
-.result-share-container,
 .next-question-btn,
 .quiz-container-mobile{
     display: none;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     padding:30px;
+}
+    
+.result-share-container{
+     display: none;
+     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
  
 .promo-container-mobile,
@@ -198,7 +196,8 @@
     animation: 1s ease-out 0s 1 slideInFromLeft;
     padding:0px 15px 0px 15px;
 }
-
+    
+.quiz-border,
 .see-score-button,
 .dolly-p2,
 .star-wars-p2{
@@ -226,47 +225,36 @@
     max-width: 100%;
 }
     
-@media(max-width: 3000px)
-{
-    .options{
-        padding: 15px 0 15px 0;
-    }
-    .press-to-start,
-    .press-to-start-txt,
-    .instruction-container,
-    .quiz-container,
-    .quiz-container-mobile{
-        text-align: center !important;
-    }
-    
-    .img-1 img,
-    .img-2 img{
-       max-height: 60vh;
-    }
-    
-    .img-1,
-    .img-2{
-        padding: 5px;
-    }
-    
-    .next-button{
-        width: 150px !important;
-    }
-    
-    .next-question-btn{
-        padding: 15px;
-    }
+.options{
+    padding: 15px 0 15px 0;
+}
+.press-to-start,
+.press-to-start-txt,
+.instruction-container,
+.quiz-container-mobile{
+    text-align: center !important;
 }
 
+.img-1 img,
+.img-2 img{
+   max-height: 60vh;
+}
+
+.img-1,
+.img-2{
+    padding: 5px;
+}
+
+.next-button{
+    width: 150px !important;
+}
+
+.next-question-btn{
+    padding: 15px;
+}
     
 .quiz-row{
     margin-top: 30px;
-}
-        
-.opt-1 h4,
-.opt-2 h4,
-.opt-3 h4{
-    width: 100%;
 }
     
 .quiz-container-mobile img{
@@ -284,6 +272,7 @@
 .share-buttons{
     display: flex;
     justify-content: center;
+    height: 50px;
 }
     
 .options button,
@@ -298,34 +287,129 @@
 .opt-2,
 .opt-3{
         width: 90% !important;
+    margin:20px;
 }
     
 .see-score-button{
     width: 170px !important;
 }
     
-    .all-quiz{
-        max-width: 650px;
-        margin: 0 auto;
-    }
+.all-quiz{
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.anaswer-container{
+    padding: 0px !important;
+    padding-right: 15px;
+    padding-left:15px;
+}
+
+.border-container-1{
+        background: url(mrq.jpg);
+        height: 430px;
+        background-repeat: no-repeat;
+        background-size: contain;
+}
+
+.border-container{
+    background-repeat: no-repeat!important;
+}
     
-    .anaswer-container{
-        padding: 0px !important;
-        padding-right: 15px;
-        padding-left:15px;
-    }
+#fb-button button::before{
+    height: 50px;
+}
+  .twitter-btn,
+  #fb-button
+{
+    transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    transform-origin: top left;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img-2{
+    display: none;
+}
 </style>
 <script>
+    //Variables/elements
     var quizStarted = false;
     var promoShown = false;
     var currQuestion = 0;
     var correctAnswers = 0;
+    
+    var quiz = $(".all-quiz");
+    
+    function findEle(searchTerm)
+    {
+        return $(quiz).find(searchTerm);
+    }
+    
+    var pcl = findEle(".photo-credit-left");
+    var pcr = findEle(".photo-credit-right");
+    var opt1H4 = findEle(".opt-1 h4");
+    var opt2H4 = findEle(".opt-2 h4");
+    var opt3H4 = findEle(".opt-3 h4");
+    var dollyp2 = findEle(".dolly-p2");
+    var img1 = findEle(".img-1 img");
+    var starWarsp2 = findEle(".star-wars-p2");
+    var answerP2 = findEle(".answer-p2");
+    var qcm = findEle(".quiz-container-mobile");
+    var resultsContainer = findEle(".results-container");
+    var qp1 = findEle(".q-p1");
+    var qp2 = findEle(".q-p2");
+    var captLeftText = findEle(".capt-left");
+    var captRightText = findEle(".capt-right");
+    var answerP1 =$(".answer-p1");
+    var nqb = findEle("next-question-btn");
+    var ac = findEle(".answer-container");
+    var ssb = findEle(".see-score-button");
+    var nqb = findEle(".next-question-btn");
+    var wc = findEle(".welcome-container");
+    var bcmrq = findEle(".border-container .mrq ");
+    var ic = findEle(".instruction-container");
+    var qb = findEle(".quiz-border");
+    var score = findEle(".score");
+    var scorep2 = findEle(".score-p2");
+    var resultShareContainer = findEle(".result-share-container");
+    var pcm = findEle(".promo-container-mobile");
+    var tbm = findEle(".twitter-mention-button");
+    
+    
+    // Quiz Data
     var opts1 = ["Cronos","Lt. Data","Dyson","Dolly","As a Trojan Bull","Munich","Forbidden Planet"]; 
     var opts2 = ["Talos","WALL-E","Sony","Polly","For religious ceremonies","Rome","THX 1138"]; 
     var opts3 = ["Minos","C-3PO","Boston Dynamics","Baarbara","For target practice","Vienna","Metropolis"]; 
     var answers = ["B. Talos", "C. C-3PO", "C. Boston Dynamics", "A. Dolly", "A. As a Trojan Bull", "A. Munich", "C. Metropolis"];
     var captLeft = ["I’ll be back. Again & Again", "The stone giant of Mont’e Prama", "Robot Horse on an Etruscan Bronze Mirror made in the 4th Century BC", "", "", "The Theater of Heron of Alexandria - Everything ran like clockwork!", "Heaphaestus  creating Pandora – note the hammer and anvil!From the Beazley Collection, photo courtesy of ClaudiaWagner."];
     var captRight = ["Talos model from Jason & The Argonauts", "", "", "", "", "", "False Maria"];
+    var creditIndex = 2;
+    var credits = [
+        "Photo courtesy of Atman Victor / Alamy Stock Photo",
+        "Photo courtesy of Ray Harryhausen/Jason and the Argonauts (1963)",
+        "Photo courtesy of Prc90",
+        "Photo courtesy of: Darryl W. Moran Photography",
+        "Photo courtesy of:  Benjay2345 - http://starwars.wikia.com/wiki/C-3PO",
+        "Robot horse on a bronze mirror,4th century BC Photo courtesy of Serge Oboukhoff © BnF/CNRS-Maison Archéologie & Ethnologie, 2011.",
+        "Photo courtesy of PACIFIC PRESS / Alamy Stock Photo",
+        "Photo courtesy of Scala / Art Resource, NY.",
+        "Image credit: Toni Barros",
+        "Photo courtesy of  Carol M. Highsmith",
+        "Daedalus, making a realistic cow for Pasiphae, 5th century Photo courtesy of Alinari",
+        "Model of the Theatre of HeronPhoto courtesy of Kotsanas Museum of Ancient Greek Technology",
+        "Photo courtesy of Jebulon",  
+        "Hephaestus creating Pandora, by PoniatowskiPhoto courtesy of Claudia Wagner.",
+        "Image credit: The evil Maschinenmensch (machine-human) Maria Photo courtesy of Adoc-photos / Art Resource, NY."
+    ];
     
     var img1Paths = [
         "GodsAndRobots_QuizAssets/Images/Alamy/TerminatorRobot.jpg",
@@ -387,19 +471,19 @@
         "The famous Munich Rathaus  Glockenspiel clock strikes twice a day, and the 32 moving figures enact a 12–15 minute story.", 
         "This silent classic made in 1927 features the evil inventor Frederesen’s robot unleashing a box of chaos upon the city"
     ];
+
+    var questionRightP2 = [
+        "Perfect score! You are a ROBOT GENIUS",
+        "Great Score! DOES COMPUTE",
+        "Good Work! NO UPGRADE REQUIRED",
+        "Better than chance!",
+        "Don’t fret. Automate!",
+        "Leave perfection to the robots.",
+        "Brave try, human!",
+        "Don’t feel bad. All robots worship the number zero."
+    ]
     
-    var questionRight = [
-        "7 out of 7   Perfect score! You are a ROBOT GENIUS",
-        "6 out of 7   Great Score! DOES COMPUTE",
-        "5 out of 7   Good Work! NO UPGRADE REQUIRED",
-        "4 out of 7   Better than chance!",
-        "3 out of 7   Don’t fret. Automate!",
-        "2 out of 7   Leave perfection to the robots.",
-        "1 out of 7   Brave try, human!",
-        "0 out of 7   Don’t feel bad. All robots worship the number zero."
-    ];
-    
-    var btns = $('.options button');
+       var btns = $('.options button');
     for(var i = 0; i < btns.length; i++)
     {
         $(btns[i]).click(function(){
@@ -409,56 +493,61 @@
             }
         });
     }
-        
-        function nextQuestion(){
-            window.scrollTo(0, 0);
-            currQuestion++;
-            changeImgs();
-            changeCaps();
-            changeQuestions();
-            changeAnswerText(); 
-            
-            if(currQuestion >= 7) {showResultContainer(); quizStarted = false; return;}
-            $(".opt-1 h4").text("A. " + opts1[currQuestion]);
-            $(".opt-2 h4").text("B. " + opts2[currQuestion]);
-            $(".opt-3 h4").text("C. " + opts3[currQuestion]);
-            
-            if(currQuestion == 2 || currQuestion == 4)
-            {
-                $(".dolly-p2").hide();
-                $(".star-wars-p2").hide();
-                $(".answer-p2").show();
-            }
-            
-            if(currQuestion == 2 || currQuestion == 5)
-            {
-                var test = $(".img-2").show();
-                test.show();
-            }
-            
-        if(currQuestion == 1 || currQuestion == 3)
-            {
-                if(currQuestion == 1){
-                $(".star-wars-p2").show();
-                }else if(currQuestion == 3)
-                {
-                    $(".dolly-p2").show();
-                }
-                $(".answer-p2").hide();
-            }
 
-            hideAnswers();
+    function nextQuestion(){
+        window.scrollTo(0, 0);
+        currQuestion++;
+        changeImgs();
+        changeCaps();
+        changeQuestions();
+        changeAnswerText();
+        $(pcl).text(credits[creditIndex]);
+        creditIndex++;
+        var test = $(pcr);
+        console.log(test);
+        $(test).text(credits[creditIndex]);
+        creditIndex++;
+
+        if(currQuestion >= 7) {showResultContainer(); quizStarted = false; return;}
+        $(opt1H4).text("A. " + opts1[currQuestion]);
+        $(opt2H4).text("B. " + opts2[currQuestion]);
+        $(opt3H4).text("C. " + opts3[currQuestion]);
+
+        if(currQuestion == 2 || currQuestion == 4)
+        {
+            $(dollyp2).hide();
+            $(starWarsp2).hide();
+            $(answerP2).show();
         }
-    
-    
+
+        if(currQuestion == 2 || currQuestion == 5)
+        {
+            $(".img-2").show();
+            $(".img-2 img").show();
+        }
+
+        if(currQuestion == 1 || currQuestion == 3)
+        {
+            if(currQuestion == 1){
+                $(starWarsp2).show();
+            }else if(currQuestion == 3)
+            {
+                $(dollyp2).show();
+            }
+            $(answerP2).hide();
+        }
+
+        hideAnswers();
+    }
+
+
     function showResultContainer()
     {
-        $(".quiz-container-mobile").hide();
-        $(".quiz-container").hide();
-        $(".results-container").show();
+        $(qcm).hide();
+        $(resultsContainer).show();
     }
-    
-    
+
+
     function changeImgs()
     {
         var imageLeft = $(".img-1 img");
@@ -466,75 +555,79 @@
         $(imageLeft).attr("src", img1Paths[currQuestion]);
         $(imageRight).attr("src", img2Paths[currQuestion])
     }
-    
+
     function changeCaps()
     {
-        $(".capt-left").text(captLeft[currQuestion]);
-        $(".capt-right").text(captRight[currQuestion]);
+        $(captLeftText).text(captLeft[currQuestion]);
+        $(captRightText).text(captRight[currQuestion]);
     }
-    
+
     function changeQuestions()
     {
-        $(".q-p1").text(questionsP1[currQuestion]);
-        $(".q-p2").text(questionsP2[currQuestion]);
+        $(qp1).text(questionsP1[currQuestion]);
+        $(qp2).text(questionsP2[currQuestion]);
     }
-    
+
     function changeAnswerText()
     {
-        $(".answer-p1").text(answersP1[currQuestion]);
-        $(".answer-p2").text(answersP2[currQuestion]);
+        $(answerP1).text(answersP1[currQuestion]);
+        $(answerP2).text(answersP2[currQuestion]);
     }
-    
+
     function hideAnswers()
     {
-       $(".next-question-btn").hide();
-       $(".answer-container").hide();
-       if(currQuestion != 2 && currQuestion != 5){
+        $(nqb).hide();
+        $(ac).hide();
+        if(currQuestion != 2 && currQuestion != 5){
             $(".img-2").hide();
-       }
+        }
     }
-    
+
     function showAnswers()
     {
-         if(currQuestion == 6)
+        if(currQuestion == 6)
         {
-           $(".see-score-button").show();
+            $(ssb).show();
         }else{
-            $(".next-question-btn").show();
+            $(nqb).show();
         }
         $(".img-2").show();
-        $(".answer-container").show();
+        $(ac).show();
     }
-    
+
     function showInstructions()
     {
-        $(".welcome-container").hide();
-        $(".instruction-container").show();
+        $(wc).hide();
+        $(ic).show();
     }
-    
+
     function startQuiz()
     {
         quizStarted = true;
-        $(".border-container .mrq").hide();
-        $(".quiz-border").show();
-        $(".instruction-container").hide();
-        $(".quiz-container-mobile").show();
+        $(bcmrq).hide();
+        $(qb).show();
+        $(ic).hide();
+        $(qcm).show();
         $(".border-container").css("height","50px");
         $('.border-container').css('background-image', 'url(' + 'Border.svg' + ')');
+        var ele = $(".border-container-1");
+        $(ele).removeClass("border-container-1");
+        $(ele).addClass("border-container");
         window.scrollTo(0, 0);
         hideAnswers();
     }
-    
+
     function showLastContainers()
     {
-        $(".quiz-container").hide();
-        $(".quiz-container-mobile").hide();
-        $(".score").text(questionRight[7-correctAnswers]);
+        $(qcm).hide();
+        $(score).text(correctAnswers + " out of 7");
+        $(scorep2).text(questionRightP2[7-correctAnswers]);
         promoShown = true;
         quizStarted = false;
-        $(".results-container").hide();
-        $(".result-share-container").show();
-        $(".promo-container-mobile").show();
+        $(resultsContainer).hide();
+        $(resultShareContainer).show();
+        $(pcm).show();
+        $(tbm).attr("data-text", "I took the Robots and Gods quiz and got a " + correctAnswers + "/7!");
         window.scrollTo(0, 0);
     }
 </script>
