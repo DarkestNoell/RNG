@@ -61,6 +61,7 @@
                     <a class="pcr-link-2" href=" http://starwars.wikia.com/wiki/C-3PO"> Benjay2345</a>
                     <a class="pcr-link-4" href="https://www.flickr.com/photos/tonibarros/3233344867/sizes/o/">Toni Barros</a>
                     <a class="pcr-link-6" href="https://commons.wikimedia.org/wiki/File:Glockenspiel_Neues_Rathaus_Munich.jpg" >Jebulon</a>
+                    <a class="pcr-link-7" href="https://commons.wikimedia.org/wiki/File:Science_Museum_-_Robots_-_Metropolis_(33268065925).jpg">Jeremy Tarling</a>
                     </div>
                 </div> 
             </div>
@@ -123,6 +124,7 @@
     .all-quiz .pcr-link-4,
     .all-quiz .pcl-link-5,
     .all-quiz .pcr-link-6,
+    .all-quiz .pcr-link-7,
     .met-title{
         display: none;
         margin-left:5px;
@@ -417,6 +419,7 @@
     var pcrl6 = findEle(".pcr-link-6");
     var pcrl4 = findEle(".pcr-link-4");
     var pcll5 = findEle(".pcl-link-5");
+    var pcrl7 = findEle(".pcr-link-7");
     var metTitle = findEle(".met-title");
     
     // Quiz Data
@@ -441,7 +444,7 @@
         "Photo courtesy of Kotsanas Museum of Ancient Greek Technology",
         "Photo courtesy of ",  
         "Photo courtesy of Beazley Collection / Claudia Wagner",
-        "Photo courtesy of Jeremy Tarling"
+        "Photo courtesy of "
     ];
     
     var img1Paths = [
@@ -557,6 +560,7 @@
             $(pcrl2).hide();
             $(pcrl6).hide();
             $(pcrl4).hide();
+            $(pcrl7).hide();
         }
         
         if(currQuestion == 2)
@@ -573,7 +577,7 @@
         {
             $(".img-2").hide();
         }
-
+        
         if(currQuestion == 1 || currQuestion == 3)
         {
             if(currQuestion == 1){
@@ -657,6 +661,11 @@
         if(currQuestion == 3)
         {
             $(pcrl4).show();
+        }
+        
+        if(currQuestion == 6)
+        {
+            $(pcrl7).show();
         }
         
         if(currQuestion == 2 || currQuestion == 4 || currQuestion == 5)
