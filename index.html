@@ -17,18 +17,18 @@
              <div class="border-container-1">
             </div>
 <div class="instruction-container container-fluid">
-            <h3 class="instruction-container-title">Everyone has a favorite robot or mechanical marvel. </h3>
+    <div><img src="quiztitle.PNG" style="max-width: 100%; padding-top: 20px; padding-bottom: 20px;"/></div>
             <h5>But did you know, deep inside your favorite robot is some DNA from the ancient world? </h5>
             <h5>Long before today's robots, and well before modern sci-fi, an amazing variety of mechanical creations, lifelike automata, and man-created technologies were thought up by the ancients.  </h5>
             <h5>We know this because they wove them into stories and painted, carved, and cast them into artworks, and those things last.</h5>
-            <h3>Ready to test your robot circuits?</h3>
+            <div><img src="rc.PNG" style="max-width: 100%; padding-top: 20px; padding-bottom: 20px;"/></div>
             <div style="text-align:center;" class="press-to-start" onclick="startQuiz()">
                 <button class="start-button" onclick="startQuiz()" href="#questionAnchor"><h4>Press to start</h4></button>
             </div>
         </div>
         <div class="quiz-container-mobile" style="padding: 0;">
         <br>
-        <h4 class="q-p1 text-center">Question #1: The Terminator movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h4>
+        <h4 class="q-p1 text-center">Question #1: The <i>Terminator</i> movies depicted a metallic nemesis who Absolutely. Would. Not. Stop.</h4>
         <h4 class="q-p2 text-center">But who was the oldest known mythic robot, who protected ancient Crete?</h4>
         <div class="quiz options">
             <div class="row">
@@ -54,7 +54,7 @@
                 <div class="col-12 img-2">
                     <img src="GodsAndRobots_QuizAssets/Images/Book/Talos.jpg" id="answerAnchorMobile">
                     <div class="row" style="display: flex; justify-content: center;">
-                        <p class="capt-right">Talos Model from <i>Jason and the Argonauts (1963)</i></p><p class="met-title"><i>Metropolis (1927)</i></p>
+                        <p class="capt-right">Talos model from <i>Jason and the Argonauts</i> (1963)</p><p class="met-title"><i>Metropolis</i> (1927)</p>
                     </div>
                     <div class="photo-credit-rc row" style="justify-content: center;">
                     <p class="photo-credit-right">Photo courtesy of Ray Harryhausen</p>                    
@@ -85,8 +85,8 @@
             <button onclick="showLastContainers()" class="see-score-button"  onclick="showLastContainers()"><h4>PRESS FOR YOUR SCORE</h4></button>
         </div>
         <div class="result-share-container text-center">
-            <h3 class="score">10/10</h3>
-            <h3 class="score-p2"></h3>
+            <h3 class="score" style="padding-top: 10px; padding-bottom: 10px;">10/10</h3>
+            <h2 class="score-p2"></h2>
             <div class="row share-buttons">
                 <div id="fb-button">
                     <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fblog.press.princeton.edu%2F2018%2F11%2F13%2Fadrienne-mayor-on-gods-and-robots%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="100" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" style="margin-right: 10px;"></iframe>
@@ -98,14 +98,14 @@
             </div>    
         </div>
         <div class="promo-container-mobile text-center">
-        <h1 class="text-center">Learn more about the ancient roots of modern robots</h1>
+        <h1 class="text-center learn-more">Learn more about the ancient roots of modern robots</h1>
         <div class="row">
             <div class="col-12">
                 <img style="max-width:100%; padding-top:25px; padding-bottom: 25px;" src="GodsAndRobots_QuizAssets/BookCover/Mayor_GodsAndRobots_Mockup.png"/>
             </div>
             <div class="col-12 text-center">
                 <h1 class="book-quote">"Wonderful storytelling, thorough research, and impressive expertise"</h1>
-                <h6>Sarah Olson, Science</h6>
+                <h6 style="padding-bottom:10px;">Sarah Olson, Science</h6>
             </div>
         </div>
         </div>
@@ -116,25 +116,32 @@
 </html>
 
 <style>
-    .all-quiz .options a{
-        margin-right:10px;
-    }
-    .all-quiz .pcr-link-2,
-    .all-quiz .pcl-link-2,
-    .all-quiz .pcr-link-4,
-    .all-quiz .pcl-link-5,
-    .all-quiz .pcr-link-6,
-    .all-quiz .pcr-link-7,
-    .met-title{
-        display: none;
-        margin-left:5px;
-        font-style:italic;
-    }
-    
-    .all-quiz .book-quote,
-    .all-quiz .quiz-container-mobile{
-        font-family: 'IBM Plex Serif', serif;
-    }
+.all-quiz learn-more{
+        font-family: abolition, sans-serif;
+}
+
+.instruction-container h5{
+    font-family: IBM Plex Serif;
+}
+
+.all-quiz .options a{
+    margin-right:10px;
+}
+.all-quiz .pcr-link-2,
+.all-quiz .pcl-link-2,
+.all-quiz .pcr-link-4,
+.all-quiz .pcl-link-5,
+.all-quiz .pcr-link-6,
+.all-quiz .pcr-link-7{
+    display: none;
+    margin-left:5px;
+    font-style:italic;
+}
+
+.all-quiz .book-quote,
+.all-quiz .quiz-container-mobile{
+    font-family: 'IBM Plex Serif', serif;
+}
 
 .all-quiz .photo-credit-left,
 .all-quiz .photo-credit-right{
@@ -176,6 +183,10 @@
 .all-quiz .start-button{
     font-family: abolition, sans-serif;
     width: 160px;
+}
+    
+.all-quiz .score{
+    font-family: IBM Plex serif;
 }
     
 .all-quiz .score-p2,
@@ -427,7 +438,7 @@
     var opts2 = ["Talos","WALL-E","Sony","Polly","For religious ceremonies","Rome","THX 1138"]; 
     var opts3 = ["Minos","C-3PO","Boston Dynamics","Baarbara","For target practice","Vienna","Metropolis"]; 
     var answers = ["B. Talos", "C. C-3PO", "C. Boston Dynamics", "A. Dolly", "A. As a Trojan Bull", "A. Munich", "C. Metropolis"];
-    var captLeft = ["I’ll be back. Again & Again", "Ancient stone giant of Mont'e Prama, Sardinia, ca. 900—700 BC", "Robot Horse on an Etruscan Bronze Mirror, Orvieto, 4th century BC", "Bronze ram of Syracuse, Sicily, 3rd century BC", "The Wall Street Charging Bull", "Model of the Theater of Heron of Alexandria", "Hephaestus creating Pandora on a neoclassical gem"];
+    var captLeft = ["I’ll be back. Again & Again", "Ancient stone giant of Mont'e Prama, Sardinia, ca. 900—700 BC", "Robot horse on an Etruscan bronze mirror, Orvieto, 4th century BC", "Bronze ram of Syracuse, Sicily, 3rd century BC", "Wall Street bull, New York, New York", "Model of the Theater of Heron of Alexandria", "Hephaestus creating Pandora on a neoclassical gem"];
     var captRight = ["", "", "", "Dolly the Sheep", "Daedalus, making a realistic cow for Pasiphae, Roman relief, 1st to 5th century AD", "Munich Rathaus Glockenspiel Clock", "False Maria from "];
     var creditIndex = 2;
     var credits = [
@@ -505,7 +516,7 @@
         "The ancient Greeks believed that techne—or craft—could create life that was “made, not born”.  Dolly was actually made (by cloning cells) and then implanted in a surrogate sheep mother and then born.", 
         "Pasiphae was the mother of the famed and ferocious Minotaur, and she lured a bull to mate with her by hiding inside Daedalus’s realistic statue bull.", 
         "The famous Munich Rathaus  Glockenspiel clock strikes twice a day, and the 32 moving figures enact a 12–15 minute story.", 
-        "This silent classic made in 1927 features the evil inventor Frederesen’s robot unleashing a box of chaos upon the city"
+        "This silent classic made in 1927 features the evil inventor Frederesen’s robot unleashing a box of chaos upon the city."
     ];
 
     var questionRightP2 = [
