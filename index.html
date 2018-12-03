@@ -98,7 +98,7 @@
             </div>    
         </div>
         <div class="promo-container-mobile text-center">
-        <h1 class="text-center learn-more">Learn more about the ancient roots of modern robots</h1>
+            <h1 class="text-center learn-more"><a href="https://press.princeton.edu/titles/14162.html">Learn more about the ancient roots of modern robots</a></h1>
         <div class="row">
             <div class="col-12">
                 <img style="max-width:100%; padding-top:25px; padding-bottom: 25px;" src="GodsAndRobots_QuizAssets/BookCover/Mayor_GodsAndRobots_Mockup.png"/>
@@ -221,6 +221,11 @@
 
 .all-quiz .btn-group button:hover {
     background-color: black;
+}
+    
+.all-quiz .met-title{
+    display: none;
+    padding-left: 5px;
 }
     
 .all-quiz .promo-container,
@@ -586,7 +591,9 @@
         
         if(currQuestion == 5)
         {
-            $(".img-2").hide();
+            $(".img-2 img").show();
+            $(captRightText).hide();
+            $(pcr).hide();
         }
         
         if(currQuestion == 1 || currQuestion == 3)
@@ -659,7 +666,9 @@
         }
         if(currQuestion == 5)
         {
-            $(".pcr-link-6").show();       
+            $(".pcr-link-6").show();   
+            $(pcr).show();
+            $(captRightText).show();
         }else{
             $(".pcr-link-6").hide();
         }
